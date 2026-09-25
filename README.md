@@ -8,8 +8,6 @@ To install it, open Terminal and paste this line.
 curl -fsSL https://raw.githubusercontent.com/danish-puri/einstein-ring/main/install.sh | bash
 ```
 
-It downloads the finished video and a small player, about 140 MB in all, and starts the wallpaper now and at every login. You need a Mac with Apple silicon on macOS 12 or later. If you would rather have a still picture, download [cosmos.png](https://github.com/danish-puri/einstein-ring/releases/latest/download/cosmos.png) and set it as your desktop picture.
-
 ![A black hole with a glowing accretion disk, surrounded by lensed stars and the Milky Way](docs/hero.jpg)
 
 I wanted a desktop that quietly reminds me how big the universe is. My first version rendered a black hole shader live in a web view, and it kept the GPU of my fanless MacBook Air at 95 to 100 percent all day. This version does the heavy work once. A Metal ray tracer renders a seamless 48 second loop, and a small native player shows it behind the desktop icons using the Mac's hardware video decoder.
