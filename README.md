@@ -1,4 +1,4 @@
-# Pale Blue Dot
+# Einstein Ring
 
 A live wallpaper for macOS. A black hole bends the light of the stars behind it, the Milky Way drifts across the sky, and somewhere in the lower left sits one small pale blue dot.
 
@@ -15,7 +15,7 @@ I wanted a desktop that quietly reminds me how big the universe is. My first ver
 ## What is in the picture
 
 - **A black hole** with a thin accretion disk. The inner disk orbits faster than the outer disk, and the side moving toward the camera looks brighter and bluer because of Doppler beaming and gravitational redshift.
-- **Gravitational lensing.** Every pixel follows a light ray through curved spacetime, so the far side of the disk shows up above and below the black hole, and background stars stream around it as the camera drifts.
+- **Gravitational lensing.** Every pixel follows a light ray through curved spacetime, so the far side of the disk shows up above and below the black hole, and background stars stream around it as the camera drifts. Stars almost directly behind it stretch into a thin circle of light called an Einstein ring, which gives the project its name.
 - **The Milky Way**, a faint band of stars with dark dust lanes, bent into an arc where it passes behind the black hole.
 - **Distant galaxies.** Each faint smudge is a whole galaxy. One small spiral sits in the upper left.
 - **A pale blue dot** in a small clear patch with a faint beam of light through it. It is a nod to the photo Voyager 1 took of Earth in 1990 from about six billion kilometers away.
@@ -54,13 +54,13 @@ The video is 2880 × 1864 at 30 frames per second, 48 seconds long, and about 13
 ## Setup
 
 ```sh
-git clone https://github.com/danish-puri/pale-blue-dot.git
-cd pale-blue-dot
+git clone https://github.com/danish-puri/einstein-ring.git
+cd einstein-ring
 ./render-video.sh        # renders cosmos.mp4 and cosmos.png, about 3.5 minutes of full GPU load
 ./wallpaper.sh install   # builds the player and starts it now and at every login
 ```
 
-To skip rendering, download `cosmos.mp4` and `cosmos.png` from the [latest release](https://github.com/danish-puri/pale-blue-dot/releases/latest) into the folder, then run `./wallpaper.sh install`.
+To skip rendering, download `cosmos.mp4` and `cosmos.png` from the [latest release](https://github.com/danish-puri/einstein-ring/releases/latest) into the folder, then run `./wallpaper.sh install`.
 
 I render the loop at 2880 × 1864, the native resolution of my display. For a different screen, change `W` and `H` at the top of `render-video.sh`. The player scales the video to fill any display either way.
 
@@ -76,7 +76,7 @@ The look lives in `scene.metal`. The constants at the top set the camera distanc
 
 ## Credits
 
-The blackbody color fit comes from Tanner Helland. The name and the little blue dot come from the Voyager 1 photograph and Carl Sagan's book *Pale Blue Dot*.
+The blackbody color fit comes from Tanner Helland. The little blue dot comes from the Voyager 1 photograph and Carl Sagan's book *Pale Blue Dot*.
 
 ## License
 
