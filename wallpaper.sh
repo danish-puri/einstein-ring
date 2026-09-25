@@ -17,7 +17,6 @@ VIDEO="$DIR/cosmos.mp4"
 STILL="$DIR/cosmos.png"
 DOMAIN="gui/$(id -u)"
 
-# Set the system picture for the legacy script installation only.
 set_desktop() {
     osascript -e "tell application \"System Events\" to tell every desktop to set picture to POSIX file \"$1\"" >/dev/null
 }
@@ -30,10 +29,8 @@ refresh_desktop() {
 
 case "${1:-}" in
     install)
-        # Validate both assets before building or changing the user's login configuration.
         [ -f "$VIDEO" ] || { echo "No cosmos.mp4 yet. Run ./render-video.sh first."; exit 1; }
-        [ -f "$STILL" ] || { echo "No cosmos.png yet. Run ./render-video.sh first."; exit 1; }
-        mkdir -p "$DIR/build" "$HOME/Library/LaunchAgents"
+        mkdir -p "$DIR/build"
         swiftc -O "$DIR/wallpaper.swift" -o "$BIN"
         cat > "$PLIST" <<EOF
 <?xml version="1.0" encoding="UTF-8"?>

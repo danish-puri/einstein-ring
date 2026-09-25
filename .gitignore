@@ -2,6 +2,4 @@
 cosmos*.mp4
 cosmos*.png
 build/
-# Distributable app bundles and disk images belong in GitHub Releases, not Git.
-dist/
 .DS_Store
