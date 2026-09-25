@@ -1,0 +1,33 @@
+EINSTEIN RING
+A black hole, a sky full of stars, and one pale blue dot.
+
+Requires an Apple silicon Mac (M1 or newer) with macOS Ventura 13 or later.
+The video is included. No Terminal, Xcode, Homebrew, or internet is needed to play it.
+
+1. Drag Einstein Ring into Applications.
+2. Open Einstein Ring from Applications, then choose Start Wallpaper.
+3. Use the sparkles icon in the menu bar to pause or choose Open at Login.
+4. Eject the Einstein Ring disk image.
+
+FIRST OPEN
+This release is not notarized by Apple. macOS may block the first launch.
+After trying to open it, go to System Settings > Privacy & Security, scroll
+to the message about Einstein Ring, and choose Open Anyway. Confirm Open.
+Only approve a copy you downloaded from the project's GitHub release:
+https://github.com/danish-puri/einstein-ring/releases/latest
+You do not need to disable Gatekeeper or run a Terminal command.
+
+TO REMOVE
+Turn off Open at Login in the sparkles menu, quit the app, then move it from
+Applications to the Trash. Your existing desktop picture remains underneath.
+
+UPGRADING FROM WALLPAPER.SH
+The app offers to replace the old player and its login item. Choose Replace,
+then use Open at Login if you want the new app to start when you sign in.
+
+HELP
+The motion pauses when the desktop is fully covered, the displays sleep,
+or Low Power Mode is enabled. Turn off Low Power Mode to resume motion.
+If Open at Login needs approval, choose Approve Login Startup in the app's menu.
+If the menu bar is crowded, close another menu bar app to reveal the sparkles.
+Report problems at https://github.com/danish-puri/einstein-ring/issues
