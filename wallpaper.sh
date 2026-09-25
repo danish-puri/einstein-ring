@@ -30,8 +30,13 @@ refresh_desktop() {
 case "${1:-}" in
     install)
         [ -f "$VIDEO" ] || { echo "No cosmos.mp4 yet. Run ./render-video.sh first."; exit 1; }
-        mkdir -p "$DIR/build"
-        swiftc -O "$DIR/wallpaper.swift" -o "$BIN"
+        # A copy set up by install.sh has no source, only the prebuilt player.
+        if [ -f "$DIR/wallpaper.swift" ]; then
+            mkdir -p "$DIR/build"
+            swiftc -O "$DIR/wallpaper.swift" -o "$BIN"
+        fi
+        [ -x "$BIN" ] || { echo "No player at $BIN."; exit 1; }
+        mkdir -p "$(dirname "$PLIST")"
         cat > "$PLIST" <<EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">

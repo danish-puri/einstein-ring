@@ -2,6 +2,14 @@
 
 A live wallpaper for macOS. A black hole bends the light of the stars behind it, the Milky Way drifts across the sky, and somewhere in the lower left sits one small pale blue dot.
 
+To install it, open Terminal and paste this line.
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/danish-puri/einstein-ring/main/install.sh | bash
+```
+
+It downloads the finished video and a small player, about 140 MB in all, and starts the wallpaper now and at every login. You need a Mac with Apple silicon on macOS 12 or later. If you would rather have a still picture, download [cosmos.png](https://github.com/danish-puri/einstein-ring/releases/latest/download/cosmos.png) and set it as your desktop picture.
+
 ![A black hole with a glowing accretion disk, surrounded by lensed stars and the Milky Way](docs/hero.jpg)
 
 I wanted a desktop that quietly reminds me how big the universe is. My first version rendered a black hole shader live in a web view, and it kept the GPU of my fanless MacBook Air at 95 to 100 percent all day. This version does the heavy work once. A Metal ray tracer renders a seamless 48 second loop, and a small native player shows it behind the desktop icons using the Mac's hardware video decoder.
@@ -55,11 +63,13 @@ The video is 2880 × 1864 at 30 frames per second, 48 seconds long, and about 13
 
 ## Requirements
 
-- macOS on Apple silicon. I built and tested it on macOS 26 with an M2 MacBook Air.
-- Xcode Command Line Tools, for `swiftc`.
+- macOS 12 or later on Apple silicon. I built and tested it on macOS 26 with an M2 MacBook Air.
+- Xcode Command Line Tools, for `swiftc`, only when building from source.
 - ffmpeg, only for rendering (`brew install ffmpeg`).
 
-## Setup
+## Building from source
+
+The installer at the top is the quick way. To change the look or render the loop yourself, clone the repo instead.
 
 ```sh
 git clone https://github.com/danish-puri/einstein-ring.git
@@ -74,9 +84,14 @@ I render the loop at 2880 × 1864, the native resolution of my display. For a di
 
 ## Controls
 
-- The ✨ icon in the menu bar pauses the motion or quits the wallpaper.
-- `./wallpaper.sh stop` and `./wallpaper.sh start` turn it off and on. It comes back at the next login either way.
-- `./wallpaper.sh uninstall` removes the login item and sets a plain gray desktop.
+- The ✨ icon in the menu bar pauses the motion or quits the wallpaper. It comes back at the next login.
+- If you used the installer, this line removes the login item and the downloaded files and sets a plain gray desktop.
+
+  ```sh
+  curl -fsSL https://raw.githubusercontent.com/danish-puri/einstein-ring/main/install.sh | bash -s uninstall
+  ```
+
+- In a clone, `./wallpaper.sh stop` and `./wallpaper.sh start` turn it off and on, and `./wallpaper.sh uninstall` removes the login item and sets a plain gray desktop.
 
 ## Making it your own
 
