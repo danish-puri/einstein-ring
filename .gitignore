@@ -1,0 +1,5 @@
+# Rendered output. Run ./render-video.sh or download it from the latest release.
+cosmos*.mp4
+cosmos*.png
+build/
+.DS_Store
