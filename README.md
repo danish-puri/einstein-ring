@@ -18,11 +18,19 @@ I wanted a desktop that quietly reminds me how big the universe is. My first ver
 - **Gravitational lensing.** Every pixel follows a light ray through curved spacetime, so the far side of the disk shows up above and below the black hole, and background stars stream around it as the camera drifts. Stars almost directly behind it stretch into a thin circle of light called an Einstein ring, which gives the project its name.
 - **The Milky Way**, a faint band of stars with dark dust lanes, bent into an arc where it passes behind the black hole.
 - **Distant galaxies.** Each faint smudge is a whole galaxy. One small spiral sits in the upper left.
-- **A pale blue dot** in a small clear patch with a faint beam of light through it. It is a nod to the photo Voyager 1 took of Earth in 1990 from about six billion kilometers away.
+- **A pale blue dot** in a small clear patch with a faint beam of light through it. It is a nod to the photo Voyager 1 took of Earth in 1990 from about six billion kilometers away. I explain the idea [below](#why-a-pale-blue-dot).
 
 | Black hole | Pale blue dot |
 | --- | --- |
 | ![Close-up of the black hole and its lensed accretion disk](docs/black-hole.jpg) | ![Close-up of the pale blue dot with a soft cyan glow](docs/pale-blue-dot.jpg) |
+
+## Why a pale blue dot
+
+Voyager 1 launched in 1977, flew past Jupiter and Saturn, and kept heading out of the solar system. On February 14, 1990, at Carl Sagan's urging, NASA turned its camera around one last time to photograph home. From about six billion kilometers away, roughly 40 times the distance from Earth to the Sun, Earth came out smaller than a single pixel. It happens to sit inside a streak of sunlight that scattered inside the camera, so by pure chance the whole planet looks caught in a beam of light.
+
+Sagan named the photo Pale Blue Dot and later wrote a book with the same title. His point was that everyone we have ever loved, every person in history, every war and every discovery happened on that speck, which he called "a mote of dust suspended in a sunbeam." From far enough away, the things we fight over look very small. He did not mean that as a sad thought. He meant it as a reason to be kinder to each other and to take care of the only home we have.
+
+That idea is why I built this wallpaper. The cyan dot in the lower left, in its faint beam, copies the photo. Around it is everything that dwarfs it, a black hole, a Milky Way full of stars, and galaxies that each hold billions more. The dot is easy to miss at first, and that is on purpose. I wanted it to show up on a second look, the same way Earth does in Voyager's photo.
 
 ## How it works
 
